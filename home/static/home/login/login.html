@@ -1,0 +1,213 @@
+
+<link rel="shortcut icon" href="../portal/favicon_fa.png">
+<script type="text/javascript">
+
+// Write your client script here, no need to add script tags.
+</script>
+<script type="text/javascript">
+var flogin = new ew_Form("flogin");
+
+// Validate function
+flogin.Validate = function()
+{
+	var fobj = this.Form;
+	if (!this.ValidateRequired)
+		return true; // ignore validation
+	if (!ew_HasValue(fobj.username))
+		return this.OnError(fobj.username, ewLanguage.Phrase("EnterUid"));
+	if (!ew_HasValue(fobj.password))
+		return this.OnError(fobj.password, ewLanguage.Phrase("EnterPwd"));
+
+	// Call Form Custom Validate event
+	if (!this.Form_CustomValidate(fobj)) return false;
+	return true;
+}
+
+// Form_CustomValidate function
+flogin.Form_CustomValidate = 
+ function(fobj) { // DO NOT CHANGE THIS LINE!
+
+ 	// Your custom validation code here, return false if invalid. 
+ 	return true;
+ }
+
+// Requires js validation
+flogin.ValidateRequired = true;
+</script>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<!-- Mirrored from www.rondbaz.com/login/login.cshtml by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Sep 2021 09:40:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ورود به پنل مدیریت فروشگاه</title>
+  <meta name="description" content="فروشگاه هوشمند">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../portal/favicon_fa.png" rel="shortcut icon">
+  <link href="login/css/bootstrap.min.css" rel="stylesheet">
+  <link href="login/css/main.css" rel="stylesheet">
+  <link href="login/css/font-awesome.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="login/js/html5shiv.min.js"></script>
+  <script src="login/js/respond.min.js"></script>
+  <![endif]-->
+  <script src="login/js/jquery.js"></script>
+  <script src="login/js/bootstrap.min.js"></script>
+  <script src="login/js/main.js"></script>
+ 
+</head>
+<body>
+
+  <div class="vertical-center">
+    <div id="login-main" class="container">
+      <div class="col-md-10 col-lg-10 col-xs-12 col-md-offset-1  animated bounceIn">
+        <div class="login-body">
+          <div id="login-box" class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
+            <div id="login-access" class="tab-pane fade active in">
+              <div id="login" class="col-md-4">
+                <a href="#"><img class="logo" src="login/img/logo2.png" alt="" border="0" /></a>
+<center style="padding-top:0px">  	                  
+<div class="ewMessageDialog"></div>
+</center>
+
+
+
+                  
+
+
+                  
+                <form name="flogin" id="flogin" class="form-horizontal ewForm ewLoginForm" action="https://www.rondbaz.com/login/login.cshtml" method="post" target="_top">
+	<div class="form-group ">
+                    <div class="input-group"  title="نام کاربری">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                      		<input dir="ltr" type="text" name="username" id="username" class="form-control ewControl" value="" placeholder="نام دامنه"></div>
+
+                    </div>
+	<div class="form-group ">
+	<div class="input-group" title="رمز عبور" >
+                      <span class="input-group-addon" id="basic-addon2"><i class="fa fa-lock"></i></span>
+                      <input dir="ltr" type="password" name="password" id="password" class="form-control ewControl" placeholder="کلمه عبور"></div>
+                    </div>		
+
+	<div id="buttons" class="form-group" >
+                    <button type="submit" style="margin-top:20px">
+                      <img src="login/img/login.png" alt=""/>
+                    </button>
+					<a href="../whyrondbaz.html" target="_blank">
+                    <button id="help-btn" type="button" >
+                      <img src="login/img/help.png" alt=""/>
+						</button></a>
+                  </div>	
+    <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<a id="ewLoginOptions" class="collapsed" data-toggle="collapse" data-target="#flogin_options">تنظیمات امنیتی <span class="icon-arrow"></span></a>
+			<div id="flogin_options" class="collapse">
+				<div class="input-group check">
+					<input type="radio" name="type" id="type1" value="a" checked="checked">ورود خودکار تا زمانی که از سیستم خارج نشده ام				</div>
+				<div class="input-group check">
+					<input type="radio" name="type" id="type2" value="u" >مرا بخاطر بسپار				</div>
+				<div class="input-group check">
+			<input type="radio" name="type" id="type3" value="" >کلمه عبور را از من بپرس				</div>
+			
+</div><br><a href="register.html">ایجاد فروشگاه </a>
+<br>
+<a href="forgotpwd.html"> آیا کلمه عبور را فراموش کرده اید؟</a>
+		</div>
+	</div>		
+</form>
+
+                             </div>
+              <div class="col-md-8">
+                <div id="slide" class="row">
+                  <div class="dots visible-lg visible-md"></div>
+                  
+                  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <a href="#"  rel="nofollow"><img src="login/img/slider1.jpg" alt="رندباز"></a>
+                      </div>
+
+						<div class="item">
+                        <a href="#"  rel="nofollow"><img src="login/img/slider2.jpg" alt="رندباز"></a>
+                      </div>
+						
+                      <div class="item">
+                        <a href="#" rel="nofollow">
+                        <img src="login/img/slider3.jpg" alt="رندباز"></a>
+						</div>
+						  
+					 <div class="item">
+						 <a href="#" rel="nofollow">
+							 <img src="login/img/slider4.jpg" alt="رندباز"</a>
+							 
+                      </div>
+
+                      </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <p style="direction:rtl">پشتیبانی: <b>۴۴۶۶۵۵۱۱-۰۲۱</b>
+                </div>
+              </div>
+            </div>
+                      </div>
+
+
+
+
+          <div id="footer" style="width:100%; text-align:center; font-size:12px; color:#999; clear:both; padding-top:10px">
+          		  <div class="container" style="width:100%; text-align:center; font-size:12px; color:#999; clear:both; padding-top:10px">
+          		    <div class="footer-content">
+          		    	<h4>ورود به پنل مدیریتی <span lang="fa">رندباز</span></h4>
+          		    	<div class="navigation">
+          		    		<a href="../index.html" target="_blank">صفحه اصلی</a> | <a href="../Tariffs-2.html" target="_blank">تعرفه ها</a> | <a href="../WhyRondbaz-2.html" target="_blank">چرا رندباز؟</a> | <a href="../help-create.html#management" target="_blank">راهنما</a> | <a href="../ContactUs-2.html" target="_blank">ارتباط با ما</a>
+          		    	</div>
+          		    </div>
+          		    <div class="footercopy">
+          			  	تمامی حقوق وب‌سایت متعلق به رندباز است
+
+
+          		      <div class="footer-icons-container">
+          		        <a class="footer-icon" href="https://telegram.me/siterondbaz" rel="nofollow" target="_blank"><i class="fa fa-paper-plane fa-fw"></i></a>
+          		        <a class="footer-icon" href="https://instagram.com/rondbazz" rel="nofollow" target="_blank"><i class="fa fa-instagram fa-fw"></i></a>
+          		        <a class="footer-icon" href="https://www.linkedin.com/company/rondbaz" rel="nofollow" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i></a>
+          		      </div>
+
+          		  	</div>
+          		  </div>
+          		</div>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+          
+<!-- Mirrored from www.rondbaz.com/login/login.cshtml by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Sep 2021 09:41:00 GMT -->
+</html>
+
+&nbsp;<script type="text/javascript">
+flogin.Init();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102018709-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
